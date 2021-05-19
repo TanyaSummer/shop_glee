@@ -1,0 +1,10 @@
+body{
+  font-size: 16px;
+  color: #8b8b8b;
+  @extend %dmsans-400;
+}
+.container{
+  max-width: 1920;
+  margin: 0 auto;
+  padding: 0 75px;
+}

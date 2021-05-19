@@ -1,0 +1,116 @@
+@import 'vars'; /*сюда писать переменные для цвета, для шрифта и т.д. и кусочки кода*/
+@import 'fonts';
+@import 'reset';/*сюда пишу reset.css*/
+@import 'global';/*что я пишу для body, для ссылок и т.д*/
+
+
+
+.header{
+  padding: 50px 0;
+}
+
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu{
+  &__list{
+    display:flex ;
+  }
+  &__list-item + .menu__list-item{
+    margin-left: 36px;
+  }
+  &__list-link{
+    @extend %rubik-500;
+    color: $title;
+    font-size: 15px;
+    line-height: 12px;
+  }
+}
+.user-nav{
+  display: flex;
+  margin: 0 10px;
+  
+  
+  &__btn{
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  &__btn + .user-nav__btn{
+    margin-left: 22px;
+  }
+  &__button{
+    margin: 0 auto;
+  }
+  &__btn-dubble{
+    width: 178px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: #fcd7b6;
+  }
+  &__btn-inner {
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+  }
+  &__btn-link{
+    position: relative;
+  }
+  &__num {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 2px;
+    right: -8px;
+    font-size: 10px;
+    color: $title;
+    text-align: center;
+    line-height: 16px;
+}
+  &__btn-img{
+    margin-top: 10px;
+  }
+  &__btn-dubble::before{
+    content: '';
+    width: 1px;
+    height: 32px;
+    background: #fde7d3;
+    float: left;
+    position: relative;
+    left: 90px;
+  }
+  &__btn-burger{
+    background-color: #a3bbc8;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'media'; /*медиазапросы*/
