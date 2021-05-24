@@ -1,6 +1,7 @@
 @import 'vars'; /*сюда писать переменные для цвета, для шрифта и т.д. и кусочки кода*/
 @import 'fonts';
 @import 'reset';/*сюда пишу reset.css*/
+@import 'libs';
 @import 'global';/*что я пишу для body, для ссылок и т.д*/
 
 
@@ -51,7 +52,7 @@
     height: 50px;
     border: none;
     border-radius: 50px;
-    background-color: #fcd7b6;
+    background-color: $accent;
   }
   &__btn-inner {
     display: flex;
@@ -67,7 +68,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: $white;
     top: 2px;
     right: -8px;
     font-size: 10px;
@@ -92,6 +93,69 @@
   }
   
 }
+
+.top-slider{
+  margin-bottom: 45px;
+  &__inner{
+    background-color: $accent;
+  }
+  &__item{
+    display: flex !important;
+    justify-content: space-between;
+    padding: 220px 300px;
+  }
+  &__title{
+    @extend %rubik-500;
+    font-size: 72px;
+    color: #243f4d;
+    margin-bottom: 40px;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-weight: 400;
+    font-size: 18px;
+    max-width: 389px;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 25px 25px;
+    font-size: 15px;
+    background-color: $button;
+  }
+  &__link{
+     color: $white;
+     margin-right: 60px;
+  }
+}
+
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  li{
+    padding: 0 0 45px;
+    button{
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 0 5px;
+      color: $title;
+      background-color: $white;
+      font-size: 10px;
+    }
+    &.slick-active{
+      button{
+        background-color: #fde3cc;
+      }
+      
+    }
+  }
+}
+
+
 .footer-top{
   display: flex;
   justify-content: space-between;
@@ -160,14 +224,10 @@
   padding: 34px 0;
   border-top: 1px solid #dae4e9;
   
-  // &__copy{
-  //   line-height: 18px;
-  // }
   &__nav{
     display: flex;
     align-items: center;
   }
-  
   
     &__nav li:nth-child(-n+3){
       padding: 0 10px;

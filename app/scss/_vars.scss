@@ -3,7 +3,9 @@
 $title: #436372;
 $links: #7b7b7b;
 $bg:#fef7f0;
+$accent:#fcd7b6;
 $button:#a3bbc8;
+$white: #fff;
 
 
 
@@ -13,6 +15,10 @@ $button:#a3bbc8;
 }
 %dmsans-400{
   font-family:'DMSans-Regular', sans-serif ;
+  font-weight: 400;
+}
+%rubik-400{
+  font-family:'Rubik-Regular', sans-serif ;
   font-weight: 400;
 }
 %rubik-500{
