@@ -95,7 +95,7 @@
 }
 
 .top-slider{
-  margin-bottom: 45px;
+  
   &__inner{
     background-color: $accent;
   }
@@ -159,10 +159,49 @@
   }
 }
 
+.benefits{
+  &__items{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fef7f0;
+  }
+
+  &__item{
+    display: flex;
+    padding: 53px 139px;
+    align-items: flex-start;
+  }
+  &__content{
+    padding-left: 23px;
+    max-width: 260px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 40px;
+    
+  }
+  &__text{
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.partners{
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding: 88px 0;
+    background-color: $bg;
+  }
+}
 
 .footer-top{
   display: flex;
   justify-content: space-between;
+  margin-top: 78px;
   &__contact{
     width: 220px;
     margin-right: 105px;
@@ -185,7 +224,7 @@
     margin-bottom: 27px;
   }
   &__nav{
-    width: 132px;
+    width: 138px;
     
   }
   &__nav-acc{
