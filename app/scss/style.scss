@@ -103,6 +103,7 @@
     display: flex !important;
     justify-content: space-between;
     padding: 220px 300px;
+    align-items: flex-end;
   }
   &__title{
     @extend %rubik-500;
@@ -128,6 +129,9 @@
   &__link{
      color: $white;
      margin-right: 60px;
+  }
+  &__img{
+    height: 100%;
   }
 }
 
