@@ -24,7 +24,7 @@
   }
   &__list-link{
     @extend %rubik-500;
-    color: $title;
+    color: $header-title;
     font-size: 15px;
     line-height: 12px;
   }
@@ -72,7 +72,7 @@
     top: 2px;
     right: -8px;
     font-size: 10px;
-    color: $title;
+    color: $header-title;
     text-align: center;
     line-height: 16px;
 }
@@ -92,110 +92,6 @@
     background-color: $button;
   }
   
-}
-
-.top-slider{
-  
-  &__inner{
-    background-color: $accent;
-  }
-  &__item{
-    display: flex !important;
-    justify-content: space-between;
-    padding: 220px 300px;
-    align-items: flex-end;
-  }
-  &__title{
-    @extend %rubik-500;
-    font-size: 72px;
-    color: #243f4d;
-    margin-bottom: 40px;
-  }
-  &__text{
-    @extend %rubik-400;
-    font-weight: 400;
-    font-size: 18px;
-    max-width: 389px;
-    margin-bottom: 40px;
-  }
-  &__btn{
-    display: flex;
-    align-items: center;
-    border: none;
-    padding: 25px 25px;
-    font-size: 15px;
-    background-color: $button;
-  }
-  &__link{
-     color: $white;
-     margin-right: 60px;
-  }
-  &__img{
-    height: 100%;
-  }
-}
-
-.slick-dots{
-  display: flex;
-  justify-content: center;
-  li{
-    padding: 0 0 45px;
-    button{
-      border: none;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      margin: 0 5px;
-      color: $title;
-      background-color: $white;
-      font-size: 10px;
-    }
-    &.slick-active{
-      button{
-        background-color: #fde3cc;
-      }
-      
-    }
-  }
-}
-
-.benefits{
-  &__items{
-    display: flex;
-    justify-content: space-around;
-    background-color: #fef7f0;
-  }
-
-  &__item{
-    display: flex;
-    padding: 53px 139px;
-    align-items: flex-start;
-  }
-  &__content{
-    padding-left: 23px;
-    max-width: 260px;
-  }
-  &__title{
-    @extend %dmsans-700;
-    font-size: 18px;
-    line-height: 40px;
-    
-  }
-  &__text{
-    @extend %dmsans-400;
-    font-size: 16px;
-    line-height: 30px;
-  }
-}
-
-.partners{
-  &__inner{
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
-    padding: 88px 0;
-    background-color: $bg;
-  }
 }
 
 .footer-top{
@@ -289,10 +185,262 @@
         top: 2px;
         right: 10px;
     }
-
-  
 }
 
+.top-slider{
+  
+  &__inner{
+    background-color: $accent;
+  }
+  &__item{
+    display: flex !important;
+    justify-content: space-between;
+    padding: 220px 300px;
+    align-items: flex-end;
+  }
+  &__title{
+    @extend %rubik-500;
+    font-size: 72px;
+    color: #243f4d;
+    margin-bottom: 40px;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-weight: 400;
+    font-size: 18px;
+    max-width: 389px;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 25px 25px;
+    font-size: 15px;
+    background-color: $button;
+  }
+  &__link{
+     color: $white;
+     margin-right: 60px;
+  }
+  &__img{
+    height: 100%;
+  }
+}
+
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  li{
+    padding: 0 0 45px;
+    button{
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 0 5px;
+      color: $header-title;
+      background-color: $white;
+      font-size: 10px;
+    }
+    &.slick-active{
+      button{
+        background-color: #fde3cc;
+      }
+      
+    }
+  }
+}
+
+.benefits{
+  margin-bottom: 70px;
+  &__items{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fef7f0;
+  }
+
+  &__item{
+    display: flex;
+    padding: 53px 139px;
+    align-items: flex-start;
+  }
+  &__content{
+    padding-left: 23px;
+    max-width: 260px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 40px;
+    
+  }
+  &__text{
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.partners{
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding: 88px 0;
+    background-color: $bg;
+  }
+}
+
+.products{
+  margin-bottom: 80px;
+  &__filter{
+    text-align: center;
+  }
+  &__filter-btn{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    margin-right: 30px;
+    margin-bottom: 80px;
+  }
+  .products__filter-btn:hover{
+    color: $title;
+  }
+  &__items{
+    max-width: 1170px;
+    margin: 0 auto;
+    // min-height: 820px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+    grid-gap: 30px 40px;
+    margin-bottom: 185px;
+  }
+  &__item{
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 20px 20px 20px 20px rgba(248, 248, 248, 1);
+    
+    
+  }
+  &__item--active{
+    display: flex;
+    position: absolute;
+    top: 175px;
+  }
+  &__item-info {
+    position: absolute;
+    bottom: 37px;
+    text-align: center;
+    
+  }
+  &__item-title{
+    line-height: 40px;
+    color: #243f4d;
+    @extend %dmsans-700;
+  }
+  &__item-price{
+    color: $button;
+    @extend %dmsans-700;
+  }
+}
+.lights{
+  &__items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+  }
+  &__item{
+    background-color: #feefe2;
+    min-height: 390px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+  }
+  &__item-img{
+    transform: translateY(-110px);
+    margin-left: 130px;
+  }
+  &__content {
+    margin-right: 150px;
+  }
+  &__title{
+    font-size: 26px;
+    @extend %dmsans-700;
+    color: #243f4d;
+    margin-bottom: 30px;
+  }
+  &__text{
+    @extend %rubik-400;
+    color: #243f4d;
+    margin-bottom: 35px;
+  }
+  &__btn{
+    display: flex;
+    align-items: center;
+    border: 1px solid #b3b7b5;
+    border-radius: 5px;
+    padding: 25px 25px;
+    font-size: 15px;
+    background-color: transparent;
+  }
+  &__btn-link{
+    color: $header-title;
+    margin-right: 40px;
+  }
+}
+.new-disign{
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    grid-gap: 36px 30px;
+    
+    min-height: 530px;
+    min-width: 1170px;
+    margin: 0 300px;
+  }
+  &__item{
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    padding: 40px 0 0 40px;
+  }
+  &__title,
+  &__subtitle{
+    font-size: 20px;
+    color: $title;
+    margin-bottom: 10px;
+    @extend %dmsans-700;
+  }
+  &__text{
+    font-size: 16px;
+    color: $button;
+    @extend %dmsans-700;
+  }
+  &__filter-btn{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    margin-right: 30px;
+    margin-bottom: 80px;
+  }
+  .new-disign__filter-btn:hover{
+    color: $title;
+  }
+  &__content{
+
+  }
+}
 
 
 
