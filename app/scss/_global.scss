@@ -37,3 +37,29 @@ a{
   text-align: center;
   margin-bottom: 35px;
 }
+.breadcrumbs{
+  &__lists{
+    display: flex;
+    justify-content: center;
+  }
+  &__list{
+    padding-right: 23px;
+    position: relative;
+    @extend %rubik-400;
+    &::after{
+      content: '';
+      width: 6px;
+      height: 12px;
+      background-image: url('../images/icons/slash.png');
+      position: absolute;
+      right: 9px;
+      top: 6px;
+    }
+    &:last-child::after{
+      content: '';
+      width: 0;
+      height: 0;
+      padding-right: 0;
+    }
+  }
+}
