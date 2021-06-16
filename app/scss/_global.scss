@@ -67,3 +67,28 @@ a{
   max-width: 1170px;
   margin: 0 auto;
 }
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__list{
+    display: flex;
+  }
+  &__link,
+  .pagination__next{
+    border: 1px solid $button;
+    padding: 18px 20px;
+    margin-right: 10px;
+    line-height: normal;
+    color: $title-info;
+    &:hover{
+      background-color: $button;
+      color: #fff;
+    }
+  }
+  &__link--active{
+    background-color: $button;
+    color: #fff;
+  }
+  
+}
