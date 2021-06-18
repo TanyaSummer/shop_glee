@@ -26,7 +26,14 @@ $(function(){
     starWidth: "10px",
     normallFill: "#d6d6d6",
     ratedFill: '#ffc35b',
-    // readOnly: true
+    
+  });
+  $(".star--product").rateYo({
+    
+    starWidth: "20px",
+    normallFill: "#d6d6d6",
+    ratedFill: '#ffc35b',
+    
   });
 
   var mixer = mixitup('.products__items');

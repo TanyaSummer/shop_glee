@@ -305,6 +305,72 @@
   margin-bottom: 80px;
   &.products__shop{
     margin-bottom: 120px;
+    width: 100%;
+    .products__items{
+      display: flex;
+      flex-direction: column;
+    }
+    .products__item-cart{
+      margin-bottom: 45px;
+      width: 100%;
+      display: flex;
+      min-height: 500px;
+    }
+    .product__item-image {
+     padding: 20px;
+     margin-right: 60px;
+     border: 1px solid #f2f2f2;
+     max-width: 370px;
+     display: flex;
+  }
+    .product__item-img {
+      max-width: none;
+      margin: auto;
+      width: 370px;
+      
+    }
+    .products__item-cart,
+    .products__item-box,
+    .products__item-info{
+      position: static;
+    }
+    .products__item-box{
+      display: none;
+    }
+    .products__item-info{
+      text-align: left;
+      margin: auto 0;
+    }
+    .products__item-title{
+      @extend %rubik-400;
+      font-size: 40px;
+      color: #333;
+      margin-bottom: 25px;
+    }
+    .star--product{
+      display: block;
+      margin-bottom: 40px;
+    }
+    .products__item-price{
+      @extend %rubik-400;
+      color: #333;
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+    .products__item-text{
+      @extend %rubik-400;
+      color: $title-info;
+      margin-bottom: 35px;
+    }
+    .products__item-btn{
+      display: block;
+      border: none;
+      border-radius: 5px;
+      background-color: $button;
+      padding: 15px 45px;
+      text-transform: uppercase;
+      color: #fff;
+    }
   }
   &__filter{
     text-align: center;
@@ -329,9 +395,10 @@
     grid-template-columns: repeat(3, 1fr );
     grid-gap: 30px 40px;
     margin-bottom: 185px;
-    &.products__items-shop{
-      margin-bottom: 110px;
-    }
+    
+  }
+  &__items-shop{
+    margin-bottom: 110px;
   }
   
   &__item-cart{
@@ -345,7 +412,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     box-shadow: 20px 20px 20px 20px rgba(248, 248, 248, 1);
+    
   }
+  
   &__item-cart{
     position: relative;
     
@@ -356,6 +425,7 @@
     right: 0;
     bottom: 37px;
     text-align: center;
+    
     
   }
   &__item-box{
@@ -380,9 +450,13 @@
   &__item-title{
     line-height: 40px;
     color: $title-info;
-
-;
     @extend %dmsans-700;
+  }
+  .star--product{
+    display: none;
+  }
+  .products__item-btn{
+    display: none;
   }
   &__item-price{
     color: $button;
@@ -937,6 +1011,7 @@ ul.information__lists{
 .shop{
   &_inner{
     display: flex;
+    gap: 30px;
   }
   &__filters{
     width: 270px;
@@ -944,7 +1019,8 @@ ul.information__lists{
 }
 .filter{
   &__item{
-    padding: 27px 15px;
+    padding: 27px 0px;
+    width: 270px;
   }
   &__title{
     display: inline-block;
